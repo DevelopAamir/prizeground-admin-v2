@@ -1,0 +1,52 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log
+yarn-error.log
+pnpm-debug.log
+
+# Python dependencies
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+Pipfile.lock
+poetry.lock
+
+# Django specific
+*.log
+db.sqlite3
+media/
+.env
+
+# Flutter
+**/build/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+pubspec.lock
+**/ios/Flutter/Flutter.framework/
+**/ios/Flutter/Flutter.podspec
+**/android/app/debug/
+**/android/app/profile/
+**/android/app/release/
+**/android/gradle/wrapper/gradle-wrapper.properties
+
+# macOS specific
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Xcode specific
+xcuserdata/
+*.xcworkspace/
+*.xcuserstate
+*.xcdebugger/
+*.xcodeproj/
+
+# Visual Studio Code specific
+.vscode/
+.vscode/*
+
+# JetBrains specific
+# Ignore Google Cloud Service Account key file
+prizeground/serviceAccountKey.json
