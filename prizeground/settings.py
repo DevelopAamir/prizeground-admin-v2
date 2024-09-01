@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-ttord4_&7@)rxevtx4$g@b573h8npeyrl3p+=k+8^k85-hlr6w"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -87,12 +87,25 @@ WSGI_APPLICATION = "prizeground.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+if DEBUG:
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.sqlite3",
+            "NAME": BASE_DIR / "db.sqlite3",
+        }
     }
-}
+else:
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.mysql",
+            "NAME": "prizeground$default",  # Replace with your actual database name if different
+            "USER": "prizeground",
+            "PASSWORD": "123@9826370489Admin",
+            "HOST": "prizeground.mysql.pythonanywhere-services.com",
+            "PORT": "3306",  # Default MySQL port
+        }
+    }
+
 
 
 # Password validation
