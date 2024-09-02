@@ -87,24 +87,14 @@ WSGI_APPLICATION = "prizeground.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-if False:
-    DATABASES = {
-        "default": {
-            "ENGINE": "django.db.backends.sqlite3",
-            "NAME": BASE_DIR / "db.sqlite3",
-        }
+
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
     }
-else:
-    DATABASES = {
-        "default": {
-            "ENGINE": "django.db.backends.mysql",
-            "NAME": "prizeground$default",  # Replace with your actual database name if different
-            "USER": "prizeground",
-            "PASSWORD": "123@9826370489Admin",
-            "HOST": "prizeground.mysql.pythonanywhere-services.com",
-            "PORT": "3306",  # Default MySQL port
-        }
-    }
+}
+
 
 
 
