@@ -17,6 +17,7 @@ poetry.lock
 db.sqlite3
 media/
 .env
+env/
 
 # Flutter
 **/build/
